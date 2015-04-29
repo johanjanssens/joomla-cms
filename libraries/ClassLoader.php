@@ -24,7 +24,7 @@ class JClassLoader
 	 *
 	 * @var \Composer\Autoload\ClassLoader
 	 */
-	 private $loader;
+	private $loader;
 
 	public function __construct(\Composer\Autoload\ClassLoader $loader)
 	{
@@ -33,7 +33,8 @@ class JClassLoader
 	
 	public function loadClass($class)
 	{
-		if($result = $this->loader->loadClass($class)) {
+		if ($result = $this->loader->loadClass($class))
+		{
 			\JLoader::applyAliasFor($class);
 			
 		}
